@@ -6,7 +6,7 @@ site:
 content:
   sources:
   - url: demo-component-a
-  - url: smf-docs
+  - url: https://github.com/crackcomm/docs-repo-test.git
     start_path: docs
 ui:
   output_dir: assets

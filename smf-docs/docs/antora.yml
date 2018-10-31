@@ -1,6 +1,0 @@
-name: smf
-title: smf rpc
-version: dev
-nav:
-- modules/ROOT/nav.adoc
-- modules/module-one/nav.adoc

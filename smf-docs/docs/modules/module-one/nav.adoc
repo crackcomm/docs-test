@@ -1,2 +1,0 @@
-* xref:overview.adoc[Module One]
-* xref:wip.adoc[LDIF]

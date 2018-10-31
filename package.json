@@ -5,7 +5,7 @@
   "scripts": {
     "build": "antora site.yml",
     "start": "npm run build && serve build/site",
-    "deploy": "gh-pages-deploy",
+    "deploy": "gh-pages-deploy --- build",
     "clean": "rimraf build",
     "dev": "nodemon"
   },

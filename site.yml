@@ -1,0 +1,15 @@
+# TODO: its just example
+site:
+  title: IPFN Documentation
+  # url: https://docs.ipfn.io/
+  start_page: smf::index.adoc
+content:
+  sources:
+  - url: demo-component-a
+  - url: smf-docs
+    start_path: docs
+ui:
+  output_dir: assets
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true

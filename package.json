@@ -1,0 +1,37 @@
+{
+  "name": "docs-ipfn-io",
+  "version": "0.0.1",
+  "description": "IPFN Documentation Page",
+  "scripts": {
+    "build": "antora site.yml",
+    "start": "npm run build && serve build/site",
+    "deploy": "gh-pages-deploy",
+    "clean": "rimraf build",
+    "dev": "nodemon"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "nodemonConfig": {
+    "ext": "adoc",
+    "verbose": true,
+    "ignore": [
+      "build/*"
+    ]
+  },
+  "gh-pages-deploy": {
+    "staticpath": "build",
+    "cname": "ipfn.io",
+    "prep": [
+      "build"
+    ],
+    "post": [
+      "clean"
+    ],
+    "noprompt": false
+  },
+  "devDependencies": {
+    "@antora/cli": "^1.1.1",
+    "gh-pages-deploy": "^0.5.0",
+    "serve": "^10.0.2"
+  }
+}

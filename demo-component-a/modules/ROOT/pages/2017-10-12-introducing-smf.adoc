@@ -1,0 +1,61 @@
+*smf* is pronounced */smɝf/*
+----------------------------
+
+
+[cols="",options="header",]
+|=============================================================
+|Important Links
+|https://groups.google.com/forum/#!forum/smf-dev[Mailing List]
+|https://senior7515.github.io/smf/[Documentation]
+|=============================================================
+
+link:%7B%7Bsite.baseurl%7D%7Drpc[*smf* RPC]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*smf* is a new RPC system and code generation like gRPC, Cap n Proto,
+Apache Thrift, etc, but designed for *microsecond tail latency*.
+
+Current benchmarks in microseconds
+
+[cols=",",options="header",]
+|========================
+|60 byte payload |latency
+|p50 |7us
+|p90 |8us
+|p99 |8us
+|p9999 |15us
+|p100 |26us
+|========================
+
+Highlights:
+~~~~~~~~~~~
+
+* Code generation compiler for RPC
+* Load testing framework for RPC subsystem
+* Kernel-bypass RPC via DPDK
+* 0-copy Serialization framework based on Google’s Flatbuffers project
+* Arbitrary filter chaining on incoming and outgoing channels (like
+twitter’s Finagle)
+* Small 16byte overhead
+* Binary with pluggable compressors
+
+We need your help!
+~~~~~~~~~~~~~~~~~~
+
+We have a lot of issues marked as
+https://github.com/senior7515/smf/labels/good%20first%20issue[good first
+issue]
+
+Look at the
+https://github.com/senior7515/smf/blob/master/CONTRIBUTING.md[contributing]
+guideline for more details.
+
+Take a look at the issue list or send an email to the
+https://groups.google.com/forum/#!forum/smf-dev[smf-dev mailing List] to
+get started.
+
+Getting started
+~~~~~~~~~~~~~~~
+
+Please see our quick
+https://senior7515.github.io/smf/getting_started/[getting started!]

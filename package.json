@@ -20,7 +20,7 @@
   },
   "gh-pages-deploy": {
     "staticpath": "build",
-    "cname": "ipfn.io",
+    "cname": "docs.ipfn.io",
     "prep": [
       "build"
     ],

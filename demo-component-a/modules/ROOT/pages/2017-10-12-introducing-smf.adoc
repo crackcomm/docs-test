@@ -1,61 +1,105 @@
-*smf* is pronounced */smɝf/*
-----------------------------
+IPFN – Interplanetary Functions
+-------------------------------
 
+https://github.com/ipfn[image:https://img.shields.io/badge/project-IPFN-blue.svg?style=flat-square[IPFN
+project]]
+link://ipfn.github.io/documentation/[image:https://img.shields.io/badge/documentation-IPFN-blue.svg?style=flat-square[IPFN
+Documentation]]
+https://travis-ci.org/ipfn/ipfn[image:https://travis-ci.org/ipfn/ipfn.svg?branch=master[Travis
+CI]]
 
-[cols="",options="header",]
-|=============================================================
-|Important Links
-|https://groups.google.com/forum/#!forum/smf-dev[Mailing List]
-|https://senior7515.github.io/smf/[Documentation]
-|=============================================================
+IPFN – Interplanetary Functions Project Development Environment
 
-link:%7B%7Bsite.baseurl%7D%7Drpc[*smf* RPC]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Quickstart
+~~~~~~~~~~
 
-*smf* is a new RPC system and code generation like gRPC, Cap n Proto,
-Apache Thrift, etc, but designed for *microsecond tail latency*.
+[source,sh]
+----
+git clone https://github.com/ipfn/ipfn.git
+cd ipfn
+vagrant up
+----
 
-Current benchmarks in microseconds
+Requirements
+~~~~~~~~~~~~
 
-[cols=",",options="header",]
-|========================
-|60 byte payload |latency
-|p50 |7us
-|p90 |8us
-|p99 |8us
-|p9999 |15us
-|p100 |26us
-|========================
+* Go >= 1.10 (only for Go SDK - link:[sh])
+* Python >= 3.0 (only for Python SDK - link:[sh])
+* node.js >= 8.4 (only for node.js SDK - link:[sh])
 
-Highlights:
-~~~~~~~~~~~
+Installed automatically in link:[Vagrant], link:[Docker] or by
+link:[shell scripts].
 
-* Code generation compiler for RPC
-* Load testing framework for RPC subsystem
-* Kernel-bypass RPC via DPDK
-* 0-copy Serialization framework based on Google’s Flatbuffers project
-* Arbitrary filter chaining on incoming and outgoing channels (like
-twitter’s Finagle)
-* Small 16byte overhead
-* Binary with pluggable compressors
+OS Support
+~~~~~~~~~~
 
-We need your help!
-~~~~~~~~~~~~~~~~~~
+[cols="<,<,<,<",options="header",]
+|=======================================================================
+|Operating System |Server Host |Client |CI
+|Fedora 29 |✓ |✓
+|https://travis-ci.org/ipfn/ipfn[image:https://travis-ci.org/ipfn/ipfn.svg?branch=master[Travis
+CI]]
 
-We have a lot of issues marked as
-https://github.com/senior7515/smf/labels/good%20first%20issue[good first
-issue]
+|Fedora 28 |✓ |✓
+|https://travis-ci.org/ipfn/ipfn[image:https://travis-ci.org/ipfn/ipfn.svg?branch=master[Travis
+CI]]
 
-Look at the
-https://github.com/senior7515/smf/blob/master/CONTRIBUTING.md[contributing]
-guideline for more details.
+|Ubuntu 18.10 |✓ |✓
+|https://travis-ci.org/ipfn/ipfn[image:https://travis-ci.org/ipfn/ipfn.svg?branch=master[Travis
+CI]]
 
-Take a look at the issue list or send an email to the
-https://groups.google.com/forum/#!forum/smf-dev[smf-dev mailing List] to
-get started.
+|Ubuntu 18.04 |✓ |✓
+|https://travis-ci.org/ipfn/ipfn[image:https://travis-ci.org/ipfn/ipfn.svg?branch=master[Travis
+CI]]
 
-Getting started
-~~~~~~~~~~~~~~~
+|Ubuntu 16.04 |✓ |✓
+|https://travis-ci.org/ipfn/ipfn[image:https://travis-ci.org/ipfn/ipfn.svg?branch=master[Travis
+CI]]
 
-Please see our quick
-https://senior7515.github.io/smf/getting_started/[getting started!]
+|Windows 10 |✗* |✓ |
+
+|OSX |✗* |✓ |
+|=======================================================================
+
+* ✓ - means platform is one of few major supported platforms.
+* ✗ - means we never tested this platform and support is not planned.
+* * - support available only in Virtual Machines (see link:#TODO[]).
+
+Container platforms
+~~~~~~~~~~~~~~~~~~~
+
+Currently supported container runtimes:
+
+* https://github.com/opencontainers/runc[runc] - linux containers
+* https://github.com/hyperhq/runv[runv] - virtual machine containers
+* https://github.com/kata-containers/runtime[kata-runtime] - virtual
+machine containers
+
+Container management is currently done
+https://github.com/containerd/containerd[containerd] instance that is
+embed in ipfn daemon.
+
+Virtualization support
+^^^^^^^^^^^^^^^^^^^^^^
+
+Kata containers currently works on systems supporting the following
+technologies:
+
+* https://www.intel.com[Intel]’s VT-x technology.
+* https://www.arm.com[ARM]’s Hyp mode (virtualization extension).
+* https://www.ibm.com[IBM]’s Power Systems.
+
+License
+~~~~~~~
+
+....
+                             Apache License
+                       Version 2.0, January 2004
+                    http://www.apache.org/licenses/
+....
+
+Project
+~~~~~~~
+
+This source code is part of https://github.com/ipfn[IPFN] –
+interplanetary functions project.

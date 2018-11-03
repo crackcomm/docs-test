@@ -8,8 +8,9 @@ content:
   - url: demo-component-a
   - url: https://github.com/crackcomm/docs-repo-test.git
     start_path: docs
-ui:
+output:
   dir: build
+ui:
   output_dir: assets
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable

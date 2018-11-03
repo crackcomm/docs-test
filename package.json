@@ -4,7 +4,7 @@
   "description": "IPFN Documentation Page",
   "scripts": {
     "build": "antora site.yml",
-    "start": "npm run build && serve build/site",
+    "start": "npm run build && serve build",
     "deploy": "gh-pages-deploy --- build",
     "clean": "rimraf build",
     "dev": "nodemon"

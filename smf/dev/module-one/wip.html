@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDFI :: IPFN Documentation</title>
+    <meta name="generator" content="Antora 1.1.1">
+    <link rel="stylesheet" href="../../../assets/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">IPFN Documentation</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="smf" data-version="dev">
+  <aside class="navigation">
+    <div class="panels">
+<div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">smf rpc</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Welcome</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="overview.html">Module One</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="wip.html">LDIF</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">smf rpc</span>
+    <span class="version">dev</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Component A</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../component-a/1.5.6/inline-text-formatting.html">1.5.6</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">smf rpc</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">smf rpc</a></li>
+    <li class="crumb"><a href="wip.html">LDIF</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/crackcomm/docs-repo-test/edit/master/docs/modules/module-one/pages/wip.adoc">Edit this Page</a></div>
+</div>
+<article class="doc">
+<h1>LDFI</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>TODO(agallego) - add refs.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>smf::condor</code> is a proposal to autogenerate an oracle that would proxy
+the requests between any two systems to systematically explore failures
+of distributed systems using the <code>smf</code> RPC.</p>
+</div>
+<div class="paragraph">
+<p>Lineage Driven Fault Injection (LDFI) is a method for finding faults by
+reasnoning backwards (<em>hazard step</em>) from correct results to determine
+whether failures in the execution could have prevented that result.</p>
+</div>
+<div class="paragraph">
+<p>Failures explored:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>permanent crashed failrues</p>
+</li>
+<li>
+<p>message loss</p>
+</li>
+<li>
+<p>network partitions.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Failures not explored:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>byzantine failures</p>
+</li>
+<li>
+<p>crash-recovery</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The ideas for <code>smf::condor</code> come from Molly, a design and implementation
+by P. Alvaro, J. Rosen and J Hellerstine. These 2 systems differ in
+significant ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Molly evalues a dadalus program (datalog-like langugage)</p>
+</li>
+<li>
+<p><code>smf:condor</code> is an extension to an RPC generator and the first phase
+will not implement a hazard step automatically.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The idea behind Molly is that, in the context of a protocol, every state
+change has pre-conditions, execution and post-conditions. Therefore when
+there is a match of the same pre-conditions but different
+post-conditions, the system has found a failure!</p>
+</div>
+<div class="paragraph">
+<p>Molly first runs a <em>forward step</em> of a distributed program given a set
+of inputs, obtaining an outcome. Then <em>hazard step</em> tries deduce
+everything that had to happen to produce that outcome and see if it can
+make it not true. That is, how can the system inject a failure to make
+the outcome not true.</p>
+</div>
+<div class="paragraph">
+<p>For example, say your protocol for an RPC was this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-flatbuffers hljs" data-lang="flatbuffers">rpc_service MyService {
+
+   // return | x |
+   int abs(int x);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A <em>forward step</em> would be, give <code>MyService::abs(1)</code> and see it return
+<code>1</code>. It is key to record the result of <code>1</code> as the system needs the
+lineage-enriched output.</p>
+</div>
+<div class="paragraph">
+<p>The <em>hazard step</em> would be to pass the inputs and recorded outputs to a
+SAT solver and have the SAT solver try to break it by for exmaple,
+giving it <code>MyService::abs(-INF)</code>.</p>
+</div>
+<div class="paragraph">
+<p>Molly has many merits. In particular the mental model it gives
+programmers to reason about sensitivity to implementation mistakes.</p>
+</div>
+<div class="paragraph">
+<p>Some protocols for example expect perfect unique id’s for transactions
+or deduplication. These protocols fail if you control the source of
+entropy (i.e.: /dev/urandom ) for generating these ids. Message replay
+of the same could cause catastrophic failures - such as double charging
+your bitcoins.</p>
+</div>
+<div class="paragraph">
+<p>Molly list the faults that any general-purpose verifyer should have. I
+will focus on the RPC general-purpose verifyer as an abstraction layer
+such that with zero work you get a state of the art fault-injector.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Message loss: <code>drop n out of N</code></p>
+</li>
+<li>
+<p>Crash failures: <code>sys.exit(1)</code></p>
+</li>
+<li>
+<p>Nondeterminisim in ordering and timing:
+<code>add arbitrary delayes per message(rpc) same as above for RPC</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note that this system is for correctness and not</p>
+</div>
+</article>
+  </main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../assets/js/site.js"></script>
+<script src="../../../assets/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>
